@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Markdown to HTML Converter</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-wrapper">
+      <header class="app-header">
+        <div class="header-inner">
+          <div class="logo">
+            <span class="logo-icon">M↓</span>
+            <span class="logo-text">MarkConvert</span>
+          </div>
+          <p class="tagline">Transform Markdown into clean HTML instantly</p>
+        </div>
+      </header>
+
+      <main class="main-content">
+        <div class="editor-grid">
+
+          <section class="panel input-panel">
+            <div class="panel-header">
+              <span class="panel-label">Markdown Input</span>
+              <button class="btn-clear" id="clear-btn" title="Clear input">&#x2715; Clear</button>
+            </div>
+            <textarea
+              id="markdown-input"
+              class="editor"
+              placeholder="Type your Markdown here...
+
+# Heading 1
+## Heading 2
+### Heading 3
+
+**bold text** or __bold text__
+*italic text* or _italic text_
+
+> A blockquote
+
+![alt text](https://example.com/img.png)
+[Link text](https://example.com)"
+              spellcheck="false"
+            ></textarea>
+          </section>
+
+          <section class="panel output-panel">
+            <div class="panel-header">
+              <span class="panel-label">HTML Output</span>
+              <button class="btn-copy" id="copy-btn" title="Copy HTML">&#x2398; Copy</button>
+            </div>
+            <pre id="html-output" class="code-output"><code></code></pre>
+          </section>
+
+          <section class="panel preview-panel">
+            <div class="panel-header">
+              <span class="panel-label">Live Preview</span>
+            </div>
+            <div id="preview" class="preview-area"></div>
+          </section>
+
+        </div>
+      </main>
+
+      <footer class="app-footer">
+        Supports headings, bold, italic, images, links &amp; blockquotes
+      </footer>
+    </div>
+
+    <div class="toast" id="toast">Copied to clipboard!</div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
